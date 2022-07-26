@@ -18,8 +18,10 @@ input.onButtonPressed(Button.B, function () {
     robotbit.MotorRun(robotbit.Motors.M1A, -144)
 })
 radio.onReceivedValue(function (name, value) {
-    Speed = value
-    basic.showNumber(Speed)
+    if (name == "Speed") {
+        Speed = value
+        basic.showNumber(Speed)
+    }
 })
 let Speed = 0
 let String2 = ""
