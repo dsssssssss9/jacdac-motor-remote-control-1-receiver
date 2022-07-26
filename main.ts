@@ -1,30 +1,33 @@
 radio.onReceivedNumber(function (receivedNumber) {
     Number2 = receivedNumber
-    basic.showNumber(Number2)
-})
-input.onButtonPressed(Button.A, function () {
-    robotbit.MotorStopAll()
-    robotbit.MotorRun(robotbit.Motors.M1A, 255)
+    if (Number2 == 1) {
+        robotbit.MotorRun(robotbit.Motors.M1A, Speed)
+    } else if (Number2 == -1) {
+        robotbit.MotorRun(robotbit.Motors.M1A, 0 - Speed)
+    }
 })
 input.onButtonPressed(Button.AB, function () {
     robotbit.MotorStopAll()
-})
-radio.onReceivedString(function (receivedString) {
-    String2 = receivedString
-    basic.showString(String2)
 })
 input.onButtonPressed(Button.B, function () {
     robotbit.MotorStopAll()
     robotbit.MotorRun(robotbit.Motors.M1A, -144)
 })
+radio.onReceivedString(function (receivedString) {
+    String2 = receivedString
+    basic.showString(String2)
+})
 radio.onReceivedValue(function (name, value) {
     if (name == "Speed") {
-        Speed = value
-        basic.showNumber(Speed)
+        Speed = Math.map(value, 0, 100, 0, 255)
     }
 })
-let Speed = 0
+input.onButtonPressed(Button.A, function () {
+    robotbit.MotorStopAll()
+    robotbit.MotorRun(robotbit.Motors.M1A, 255)
+})
 let String2 = ""
+let Speed = 0
 let Number2 = 0
 Number2 = 0
 robotbit.MotorStopAll()
