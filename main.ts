@@ -1,5 +1,6 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    basic.showNumber(receivedNumber)
+    Number2 = receivedNumber
+    basic.showNumber(Number2)
 })
 input.onButtonPressed(Button.A, function () {
     robotbit.MotorStopAll()
@@ -12,6 +13,8 @@ input.onButtonPressed(Button.B, function () {
     robotbit.MotorStopAll()
     robotbit.MotorRun(robotbit.Motors.M1A, -144)
 })
+let Number2 = 0
+Number2 = 0
 robotbit.MotorStopAll()
 radio.setGroup(42)
 let strip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
