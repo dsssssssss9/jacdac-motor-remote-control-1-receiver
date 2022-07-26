@@ -39,5 +39,7 @@ basic.forever(function () {
         robotbit.MotorRun(robotbit.Motors.M1A, Speed)
     } else if (Number2 == -1) {
         robotbit.MotorRun(robotbit.Motors.M1A, 0 - Speed)
+    } else if (Number2 == 0) {
+        robotbit.MotorStopAll()
     }
 })
