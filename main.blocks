@@ -2,7 +2,11 @@
 
 This code uses a KittenBot RobotBit to control the speed &amp; direction of a 3v DC motor connected to it 
 
-Speed &amp; direction are derived from values sent from a transmitter Micro:Bit</comment><block type="pxt-on-start" id="9a1*e1Kh;Y:#IR6S!/ym" collapsed="true" x="20" y="20"><comment pinned="false" h="80" w="160">on start do following...
+Speed &amp; direction are derived from values sent from a transmitter Micro:Bit
+
+In this example the DC motor is connected to M!A on the RobotBit
+
+The On-Board Neopixels are connected to PIN16</comment><block type="pxt-on-start" id="9a1*e1Kh;Y:#IR6S!/ym" collapsed="true" x="20" y="20"><comment pinned="false" h="80" w="160">on start do following...
 
 set motor speed to 0
 stop motor

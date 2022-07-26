@@ -4,6 +4,10 @@
  * This code uses a KittenBot RobotBit to control the speed & direction of a 3v DC motor connected to it 
  * 
  * Speed & direction are derived from values sent from a transmitter Micro:Bit
+ * 
+ * In this example the DC motor is connected to M!A on the RobotBit
+ * 
+ * The On-Board Neopixels are connected to PIN16
  */
 // If received data = "Name" then set variable "Speed" to value of data 
 // In this case the slider has value range  from 0 to 100 so this is mapped to 0 - 255 as that is whet the RobotBit Motor value range is  
