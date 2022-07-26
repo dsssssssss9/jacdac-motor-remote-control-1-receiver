@@ -1,10 +1,5 @@
 radio.onReceivedNumber(function (receivedNumber) {
     Number2 = receivedNumber
-    if (Number2 == 1) {
-        robotbit.MotorRun(robotbit.Motors.M1A, Speed)
-    } else if (Number2 == -1) {
-        robotbit.MotorRun(robotbit.Motors.M1A, 0 - Speed)
-    }
 })
 input.onButtonPressed(Button.AB, function () {
     robotbit.MotorStopAll()
@@ -26,8 +21,8 @@ input.onButtonPressed(Button.A, function () {
     robotbit.MotorStopAll()
     robotbit.MotorRun(robotbit.Motors.M1A, 255)
 })
-let String2 = ""
 let Speed = 0
+let String2 = ""
 let Number2 = 0
 Number2 = 0
 robotbit.MotorStopAll()
@@ -40,5 +35,9 @@ basic.pause(200)
 strip.clear()
 strip.show()
 basic.forever(function () {
-	
+    if (Number2 == 1) {
+        robotbit.MotorRun(robotbit.Motors.M1A, Speed)
+    } else if (Number2 == -1) {
+        robotbit.MotorRun(robotbit.Motors.M1A, 0 - Speed)
+    }
 })
