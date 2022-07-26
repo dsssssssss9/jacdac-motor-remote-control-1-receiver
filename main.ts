@@ -9,10 +9,15 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     robotbit.MotorStopAll()
 })
+radio.onReceivedString(function (receivedString) {
+    String2 = receivedString
+    basic.showString(String2)
+})
 input.onButtonPressed(Button.B, function () {
     robotbit.MotorStopAll()
     robotbit.MotorRun(robotbit.Motors.M1A, -144)
 })
+let String2 = ""
 let Number2 = 0
 Number2 = 0
 robotbit.MotorStopAll()
