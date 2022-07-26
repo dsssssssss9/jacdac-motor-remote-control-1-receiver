@@ -1,10 +1,12 @@
 input.onButtonPressed(Button.A, function () {
+    robotbit.MotorStopAll()
     robotbit.MotorRun(robotbit.Motors.M1A, 255)
 })
 input.onButtonPressed(Button.AB, function () {
     robotbit.MotorStopAll()
 })
 input.onButtonPressed(Button.B, function () {
+    robotbit.MotorStopAll()
     robotbit.MotorRun(robotbit.Motors.M1A, -144)
 })
 robotbit.MotorStopAll()
