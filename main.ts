@@ -1,3 +1,6 @@
+radio.onReceivedNumber(function (receivedNumber) {
+    basic.showNumber(receivedNumber)
+})
 input.onButtonPressed(Button.A, function () {
     robotbit.MotorStopAll()
     robotbit.MotorRun(robotbit.Motors.M1A, 255)
