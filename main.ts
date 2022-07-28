@@ -44,11 +44,5 @@ strip.clear()
 strip.show()
 // set motor to rotate in direction based on number ( 1 is clockwise , -1 is anti-clockwise ) at speed determined by value received from transmitter. In this case a Slide Potentiometer
 basic.forever(function () {
-    if (Number2 == 1) {
-        robotbit.MotorRun(robotbit.Motors.M1A, Speed)
-    } else if (Number2 == -1) {
-        robotbit.MotorRun(robotbit.Motors.M1A, 0 - Speed)
-    } else if (Number2 == 0) {
-        robotbit.MotorStopAll()
-    }
+    robotbit.MotorRun(robotbit.Motors.M1A, Speed * Number2)
 })
